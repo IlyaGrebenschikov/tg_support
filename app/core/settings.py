@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 class EnvSettings(BaseSettings):  
-    root_dir: DirectoryPath = Path(__file__).parent
+    root_dir: DirectoryPath = Path(__file__).parent.parent.parent
     model_config = SettingsConfigDict(
         env_file=f'{root_dir}/.env',
         env_file_encoding='utf-8',
@@ -28,4 +28,4 @@ def get_settings() -> Settings:
 
 if __name__ == '__main__':
     print(get_settings().env.BOT_TOKEN)
-    print(get_settings().env.URL)
+    print(get_settings().env.WHOOK)

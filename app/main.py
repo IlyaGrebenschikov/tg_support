@@ -3,7 +3,7 @@ import uvicorn
 
 from fastapi import FastAPI, Request
 
-from settings import get_settings
+from core.settings import get_settings
 
 
 app = FastAPI()
